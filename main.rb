@@ -3,6 +3,7 @@
 require './Game.rb'
 require './Player.rb'
 require './Question.rb'
+require './Turn.rb'
 
 the_game = Game.new
 
