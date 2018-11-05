@@ -24,7 +24,12 @@ class Game
   end
 
   def attempt_response(attempt)
-    @question.is_correct?(attempt) ? 'Yes! Good job!' : 'Wrong, wrong, wrong!'
+    if @question.is_correct?(attempt)
+      'Yes! Good job!'
+    else
+      @current_player.lose_life
+      'Wrong, wrong, wrong!'
+    end
   end
 
   def get_question
