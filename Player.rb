@@ -15,4 +15,8 @@ class Player
     @lives == 0
   end
 
+  def give_status
+    "#{@name}: #{lives}/3"
+  end
+
 end
