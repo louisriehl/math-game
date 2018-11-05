@@ -11,7 +11,7 @@ class Player
     @lives -= 1
   end
 
-  def is_out_of_lives?
+  def is_out?
     @lives == 0
   end
 
