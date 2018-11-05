@@ -21,6 +21,9 @@ class Game
       puts @players.map { |player| player.give_status }.join(" vs ")
       self.change_player
     end
+
+    winner = get_winner
+    puts "#{winner.give_status} wins!"
   end
 
   def attempt_response(attempt)
@@ -45,6 +48,10 @@ class Game
 
   def game_over?
     @players.any? { |player| player.is_out? }
+  end
+
+  def get_winner
+    @players.select { |player| !player.is_out? }.first
   end
 
 end
