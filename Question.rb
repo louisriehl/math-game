@@ -1,5 +1,7 @@
 class Question
 
+  attr_reader :integers, :answer
+
   MAXIMUM_INTEGER = 20
 
   def initialize
@@ -14,6 +16,10 @@ class Question
 
   def get_correct_answer(array)
     array[0] + array[1]
+  end
+
+  def is_correct?(attempt)
+    attempt === @answer
   end
 
 end
